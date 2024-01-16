@@ -1,8 +1,7 @@
 <?php
 
-// const array_cookies = ["a", "b", "c", "c"];
 
-function table_cookies($name_cookies)
+function table_cookies()
 {
     echo "<h2>Cookies creadas</h2>";
 
@@ -12,22 +11,13 @@ function table_cookies($name_cookies)
     echo "<th scope=\"col\">Cookie name</th>";
     echo "<th scope=\"col\">Cookie Cookie value</th>";
     echo "</tr>";
-    
-    foreach ($name_cookies as  $name_cookie) {
-        $cookie_value = $_COOKIE[$name_cookie];
+
+    foreach ($_COOKIE as $key => $value) {
+
         echo "<tr>";
-        echo "<td>$name_cookie</td>";
-        echo "<td>$cookie_value</td>";
+        echo "<td>$key</td>";
+        echo "<td>$value</td>";
         echo "</tr>";
     }
     echo "</table>";
 }
-
-
-// function set_cookies()
-// {
-//     setcookie("a", 1);
-//     setcookie("b", 1);
-//     setcookie("c", 1);
-//     setcookie("d", 1);
-// }
