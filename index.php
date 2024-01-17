@@ -32,7 +32,7 @@
     require_once 'cookies.php';
     require_once 'tabla_cookies.php';
 
-    if(isset($_POST['cookie_name'])&&isset($_POST['cookie_value'])&&isset($_POST['cookie_expiration'])){
+    if(isset($_POST['cookie_name'])&&isset($_POST['cookie_value'])){
         setearCookies($_POST);
         header('Location: index.php');
     }
