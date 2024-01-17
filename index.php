@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
         <label for="cookie_value">Cookie expiration seconds</label>
-        <input type="number" class="form-control" name ="cookie_expiration"id="cookie_expiration" required>
+        <input type="number" class="form-control" name ="cookie_expiration"id="cookie_expiration">
         </div>
 
         <button type="submit" class="btn btn-primary mt-3">Submit</button>
