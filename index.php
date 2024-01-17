@@ -13,20 +13,35 @@
     <form method="post">
         <div class="form-group">
         <label for="cookie_name">Cookie name</label>
-        <input type="text" class="form-control" name ="cookie_name" id="cookie_name" placeholder="Enter a cookie name">
+        <input type="text" class="form-control" name ="cookie_name" id="cookie_name" placeholder="Enter a cookie name" required>
         </div>
         <div class="form-group">
         <label for="cookie_value">Cookie value</label>
-        <input type="text" class="form-control" name ="cookie_value"id="cookie_value" placeholder="Cookie value">
+        <input type="text" class="form-control" name ="cookie_value"id="cookie_value" placeholder="Cookie value" required>
         </div>
         <div class="form-group">
         <label for="cookie_value">Cookie expiration seconds</label>
-        <input type="number" class="form-control" name ="cookie_expiration"id="cookie_expiration">
+        <input type="number" class="form-control" name ="cookie_expiration"id="cookie_expiration" required>
         </div>
 
         <button type="submit" class="btn btn-primary mt-3">Submit</button>
         
     </form>
     </section>
+    <?php 
+    require_once 'cookies.php';
+    require_once 'tabla_cookies.php';
+
+    if(isset($_POST['cookie_name'])&&isset($_POST['cookie_value'])&&isset($_POST['cookie_expiration'])){
+        setearCookies($_POST);
+        header('Location: index.php');
+    }
+    
+    table_cookies();
+
+
+
+
+    ?>
 </body>
 </html>
