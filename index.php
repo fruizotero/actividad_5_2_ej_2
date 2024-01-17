@@ -36,8 +36,9 @@
         setearCookies($_POST);
         header('Location: index.php');
     }
-    
-    table_cookies();
+    if(count($_COOKIE) > 0){
+        table_cookies();
+    }
 
 
 
